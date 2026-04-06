@@ -1,0 +1,530 @@
+<p>/* ===========================================================</p>
+<p>&nbsp; &nbsp;INFOGRAF&Iacute;A INTERACTIVA &mdash; &quot;Aprender *** l&iacute;mites&quot;</p>
+<p>&nbsp; &nbsp;CSS Vanilla | Mobile ***** | Sin JavaScript</p>
+<p>&nbsp; &nbsp;=========================================================== */</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;1. RESET Y ********* IMPL&Iacute;CITAS</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>*,</p>
+<p>*::before,</p>
+<p>*::after {</p>
+<p>&nbsp; margin: 0;</p>
+<p>&nbsp; padding: 0;</p>
+<p>&nbsp; box-sizing: border-box;</p>
+<p>}</p>
+<p><br></p>
+<p>html {</p>
+<p>&nbsp; font-size: 16px;</p>
+<p>&nbsp; scroll-behavior: smooth;</p>
+<p>&nbsp; /* Evita *** ** scroll-bounce ** iOS rompa el layout */</p>
+<p>&nbsp; overflow-x: hidden;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;2. BASE &mdash; **** Y FONDO DECORATIVO</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>body {</p>
+<p>&nbsp; font-family: &apos;DM Sans&apos;, sans-serif;</p>
+<p>&nbsp; color: #D6DCE8;</p>
+<p>&nbsp; min-height: 100vh;</p>
+<p>&nbsp; line-height: 1.6;</p>
+<p>&nbsp; /* Fondo **** azul muy oscuro, derivado de #1E3A8A */</p>
+<p>&nbsp; background-color: #080E24;</p>
+<p>&nbsp; /* Patr&oacute;n de grilla ***** para dar textura */</p>
+<p>&nbsp; background-image:</p>
+<p>&nbsp; &nbsp; linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),</p>
+<p>&nbsp; &nbsp; linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);</p>
+<p>&nbsp; background-size: 48px 48px;</p>
+<p>&nbsp; position: relative;</p>
+<p>}</p>
+<p><br></p>
+<p>/* Capa ** gradientes radiales superpuesta **** profundidad */</p>
+<p>body::before {</p>
+<p>&nbsp; content: &apos;&apos;;</p>
+<p>&nbsp; position: fixed;</p>
+<p>&nbsp; inset: 0;</p>
+<p>&nbsp; background:</p>
+<p>&nbsp; &nbsp; radial-gradient(ellipse 70% 50% at 15% -5%, rgba(30, 58, 138, 0.55) 0%, *********** 100%),</p>
+<p>&nbsp; &nbsp; radial-gradient(ellipse 60% 40% at 85% 105%, rgba(16, 185, 129, 0.12) 0%, transparent 100%),</p>
+<p>&nbsp; &nbsp; radial-gradient(****** at 50% 50%, rgba(245, 158, 11, 0.04) 0%, *********** 60%);</p>
+<p>&nbsp; z-index: 0;</p>
+<p>&nbsp; pointer-events: none;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;3. ********** PRINCIPAL</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.infographic {</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; z-index: 1;</p>
+<p>&nbsp; max-width: 880px;</p>
+<p>&nbsp; margin: 0 auto;</p>
+<p>&nbsp; padding: 2.5rem 1.25rem 3rem;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;4. CABECERA &mdash; T&Iacute;TULO Y SUBT&Iacute;TULO</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.infographic-header {</p>
+<p>&nbsp; text-align: center;</p>
+<p>&nbsp; margin-bottom: 2.5rem;</p>
+<p>}</p>
+<p><br></p>
+<p>.infographic-header h1 {</p>
+<p>&nbsp; font-family: &apos;******** Display&apos;, serif;</p>
+<p>&nbsp; font-weight: 900;</p>
+<p>&nbsp; font-size: clamp(2rem, 7vw, 3.25rem);</p>
+<p>&nbsp; color: #FFFFFF;</p>
+<p>&nbsp; letter-spacing: -0.02em;</p>
+<p>&nbsp; line-height: 1.15;</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; display: inline-block;</p>
+<p>}</p>
+<p><br></p>
+<p>/* L&iacute;nea decorativa &aacute;mbar ****** *** t&iacute;tulo */</p>
+<p>.infographic-header h1::after {</p>
+<p>&nbsp; content: &apos;&apos;;</p>
+<p>&nbsp; display: block;</p>
+<p>&nbsp; width: 56px;</p>
+<p>&nbsp; height: 3px;</p>
+<p>&nbsp; background: #F59E0B;</p>
+<p>&nbsp; margin: 0.75rem auto 0;</p>
+<p>&nbsp; border-radius: 2px;</p>
+<p>}</p>
+<p><br></p>
+<p>.subtitle {</p>
+<p>&nbsp; font-size: 0.95rem;</p>
+<p>&nbsp; font-weight: 400;</p>
+<p>&nbsp; color: rgba(214, 220, 232, 0.55);</p>
+<p>&nbsp; margin-top: 0.6rem;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;5. LISTA &mdash; CONTENEDOR</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.list-items {</p>
+<p>&nbsp; list-style: none;</p>
+<p>&nbsp; display: flex;</p>
+<p>&nbsp; flex-direction: column;</p>
+<p>&nbsp; gap: 1rem;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;6. &Iacute;TEM DE LISTA &mdash; ESTADO **** Y HOVER</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.list-item {</p>
+<p>&nbsp; display: flex;</p>
+<p>&nbsp; flex-direction: row;</p>
+<p>&nbsp; align-items: flex-start;</p>
+<p>&nbsp; gap: 1rem;</p>
+<p>&nbsp; padding: 1.25rem;</p>
+<p>&nbsp; border-radius: 14px;</p>
+<p>&nbsp; /* ***** semi-************ tipo vidrio */</p>
+<p>&nbsp; background: rgba(255, 255, 255, 0.03);</p>
+<p>&nbsp; border: 1px solid rgba(255, 255, 255, 0.05);</p>
+<p>&nbsp; /* Transici&oacute;n principal: all 0.4s ease-in-out */</p>
+<p>&nbsp; transition: all 0.4s ease-in-out;</p>
+<p>&nbsp; /* ***** target m&iacute;nimo 48** de alto **** accesibilidad m&oacute;vil */</p>
+<p>&nbsp; min-height: 48px;</p>
+<p>&nbsp; /* Borde ********* decorativo ***** */</p>
+<p>&nbsp; border-left: 3px ***** rgba(16, 185, 129, 0.15);</p>
+<p>}</p>
+<p><br></p>
+<p>/* Estado ***** del &iacute;tem */</p>
+<p>.list-item:hover {</p>
+<p>&nbsp; background: rgba(255, 255, 255, 0.07);</p>
+<p>&nbsp; border-color: rgba(16, 185, 129, 0.35);</p>
+<p>&nbsp; border-left-color: #10B981;</p>
+<p>&nbsp; transform: translateX(5px);</p>
+<p>&nbsp; box-shadow: 0 4px 24px rgba(16, 185, 129, 0.07);</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;7. COLUMNA IZQUIERDA &mdash; WRAPPER *** &Iacute;**** Y N&Uacute;MERO</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.item-icon-wrapper {</p>
+<p>&nbsp; display: flex;</p>
+<p>&nbsp; flex-direction: column;</p>
+<p>&nbsp; align-items: center;</p>
+<p>&nbsp; gap: 0.4rem;</p>
+<p>&nbsp; flex-shrink: 0;</p>
+<p>}</p>
+<p><br></p>
+<p>.item-number {</p>
+<p>&nbsp; font-family: &apos;DM Sans&apos;, sans-serif;</p>
+<p>&nbsp; font-weight: 900;</p>
+<p>&nbsp; font-size: 0.7rem;</p>
+<p>&nbsp; color: #F59E0B;</p>
+<p>&nbsp; letter-spacing: 0.08em;</p>
+<p>&nbsp; opacity: 0.85;</p>
+<p>&nbsp; transition: opacity 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>.list-item:hover .item-number {</p>
+<p>&nbsp; opacity: 1;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;8. ★ ****** #18 &mdash; SEMIC&Iacute;RCULO *** ROTACI&Oacute;N AL COMPLETAR</p>
+<p>&nbsp; &nbsp;-----------------------------------------------------------</p>
+<p><br></p>
+<p>&nbsp; &nbsp;Mecanismo:</p>
+<p>&nbsp; &nbsp;┌──────────────────────────────────────────────────────┐</p>
+<p>&nbsp; &nbsp;│ .item-icon es ** contenedor cuadrado con &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ border-radius: 50% impl&iacute;cito (v&iacute;a clip-path). &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ ::****** &nbsp;&rarr; Semic&iacute;rculo izquierdo (SIEMPRE visible) │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;clip-path: circle(50% at 25% 50%) &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ ::after &nbsp; &rarr; Semic&iacute;rculo que ROta ** hover &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mismo clip-path, pero transform: &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;rotate(0deg) &rarr; rotate(180deg) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ Al rotar 180&deg;, ** centro del clip (25% 50%) &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ se ******** a (75% 50%), mostrando el lado &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ ******* y completando ** c&iacute;rculo. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ ⚙️ PARA AJUSTAR ** VELOCIDAD ** ROTACI&Oacute;N: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;Cambia ** ***** de &apos;transition&apos; ** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;.item-icon::after (l&iacute;*** ~155). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;Ejemplo: 0.3s = r&aacute;**** &middot; ** = lento y elegante &nbsp; │</p>
+<p>&nbsp; &nbsp;└──────────────────────────────────────────────────────┘</p>
+<p>*/</p>
+<p><br></p>
+<p>.item-icon {</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; width: 56px;</p>
+<p>&nbsp; height: 56px;</p>
+<p>&nbsp; display: flex;</p>
+<p>&nbsp; align-items: center;</p>
+<p>&nbsp; justify-content: center;</p>
+<p>}</p>
+<p><br></p>
+<p>/* Semic&iacute;rculo izquierdo: siempre visible */</p>
+<p>.item-icon::before {</p>
+<p>&nbsp; content: &apos;&apos;;</p>
+<p>&nbsp; position: absolute;</p>
+<p>&nbsp; inset: 0;</p>
+<p>&nbsp; background: #10B981;</p>
+<p>&nbsp; clip-path: circle(50% at 25% 50%);</p>
+<p>&nbsp; z-index: 0;</p>
+<p>&nbsp; transition: all 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>/* Semic&iacute;rculo *** rota para completar el c&iacute;rculo al hover */</p>
+<p>.item-icon::after {</p>
+<p>&nbsp; content: &apos;&apos;;</p>
+<p>&nbsp; position: absolute;</p>
+<p>&nbsp; inset: 0;</p>
+<p>&nbsp; background: #10B981;</p>
+<p>&nbsp; clip-path: circle(50% at 25% 50%);</p>
+<p>&nbsp; transform: rotate(0deg);</p>
+<p>&nbsp; transform-origin: center center;</p>
+<p>&nbsp; z-index: 0;</p>
+<p>&nbsp; /* ⚙️ VELOCIDAD DE ROTACI&Oacute;N &mdash; cambia este valor */</p>
+<p>&nbsp; transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);</p>
+<p>}</p>
+<p><br></p>
+<p>/* Al hover: el segundo semic&iacute;rculo rota 180&deg;, completando ** fondo */</p>
+<p>.list-item:hover .item-icon::after {</p>
+<p>&nbsp; transform: rotate(180deg);</p>
+<p>}</p>
+<p><br></p>
+<p>/* Efecto de ********** sutil en ** &iacute;cono al ***** */</p>
+<p>.list-item:hover .item-icon::before,</p>
+<p>.list-item:hover .item-icon::after {</p>
+<p>&nbsp; filter: drop-shadow(0 0 8** rgba(16, 185, 129, 0.35));</p>
+<p>}</p>
+<p><br></p>
+<p>/* ** ***** se sit&uacute;a por encima de los pseudoelementos */</p>
+<p>.icon-emoji {</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; z-index: 1;</p>
+<p>&nbsp; font-size: 1.4rem;</p>
+<p>&nbsp; line-height: 1;</p>
+<p>&nbsp; transition: ********* 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>.list-item:hover .icon-emoji {</p>
+<p>&nbsp; transform: scale(1.18);</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;9. COLUMNA DERECHA &mdash; CONTENIDO DE TEXTO</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.item-content {</p>
+<p>&nbsp; flex: 1;</p>
+<p>&nbsp; min-width: 0; /* ***** que el texto desborde en **** */</p>
+<p>&nbsp; padding-top: 0.1rem; /* Alineaci&oacute;n ****** con el &iacute;cono */</p>
+<p>}</p>
+<p><br></p>
+<p>.title-text {</p>
+<p>&nbsp; font-family: &apos;DM Sans&apos;, sans-serif;</p>
+<p>&nbsp; font-weight: 700;</p>
+<p>&nbsp; font-size: 1.05rem;</p>
+<p>&nbsp; color: #FFFFFF;</p>
+<p>&nbsp; line-height: 1.35;</p>
+<p>&nbsp; margin-bottom: 0.35rem;</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; display: inline-block;</p>
+<p>&nbsp; transition: color 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>.list-item:hover .title-text {</p>
+<p>&nbsp; color: #FFFFFF;</p>
+<p>}</p>
+<p><br></p>
+<p>.item-content p {</p>
+<p>&nbsp; font-size: 0.88rem;</p>
+<p>&nbsp; font-weight: 400;</p>
+<p>&nbsp; color: rgba(214, 220, 232, 0.55);</p>
+<p>&nbsp; line-height: 1.65;</p>
+<p>&nbsp; transition: color 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>/* El p&aacute;***** se ******* *********** al hover */</p>
+<p>.list-item:hover .item-content p {</p>
+<p>&nbsp; color: rgba(214, 220, 232, 0.78);</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;10. ★ ****** #24 &mdash; L&Iacute;NEA ******** ANIMADA BAJO EL T&Iacute;TULO</p>
+<p>&nbsp; &nbsp;-----------------------------------------------------------</p>
+<p><br></p>
+<p>&nbsp; &nbsp;Mecanismo:</p>
+<p>&nbsp; &nbsp;┌──────────────────────────────────────────────────────┐</p>
+<p>&nbsp; &nbsp;│ Se usa ::***** del .title-text **** contenedor &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ de la onda. El SVG se aplica como background-image &nbsp; │</p>
+<p>&nbsp; &nbsp;│ con repeat-x y ** anima *** @keyframes *********** &nbsp;│</p>
+<p>&nbsp; &nbsp;│ background-position horizontalmente. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ Inicialmente opacity: 0. Al hover, opacity: 1 y &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ ** activa la animaci&oacute;n de deslizamiento. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ ⚙️ **** CAMBIAR EL SVG DE ** L&Iacute;*** ONDULADA: &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;********* ** URL dentro de background-image en &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;.title-text::after (l&iacute;nea ~240). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;** SVG actual usa URL encoding. Para convertir &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;a base64 puro: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;1. Crea tu SVG en ** ****** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;2. P&eacute;galo en base64encode.org &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;3. Usa: url(&quot;data:image/svg+xml;base64,TU_B64&quot;) &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;IMPORTANTE: El SVG debe ser perfectamente &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;peri&oacute;dico **** que repeat-x no tenga saltos. &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;** ***** del SVG debe ********* con &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;background-**** **** que la animaci&oacute;n sea fluida. │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ ⚙️ **** AJUSTAR LA VELOCIDAD DE LA ONDA: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;Cambia &apos;1.8s&apos; en animation: wave-slide 1.8s &nbsp; &nbsp; &nbsp;│</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;(l&iacute;nea ~258). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;│ &nbsp; &nbsp;1s = r&aacute;**** &middot; 3s = lenta y contemplativa &nbsp; &nbsp; &nbsp; &nbsp; │</p>
+<p>&nbsp; &nbsp;└──────────────────────────────────────────────────────┘</p>
+<p>*/</p>
+<p><br></p>
+<p>.title-text::after {</p>
+<p>&nbsp; content: &apos;&apos;;</p>
+<p>&nbsp; position: absolute;</p>
+<p>&nbsp; bottom: -5px;</p>
+<p>&nbsp; left: 0;</p>
+<p>&nbsp; width: 100%;</p>
+<p>&nbsp; height: 8px;</p>
+<p>&nbsp; /* ⚙️ REEMPLAZA ESTA *** POR TU PROPIO *** (ver notas arriba) */</p>
+<p>&nbsp; background-image: url(&quot;data:image/svg+xml,%3**** xmlns=&apos;<a data-fr-linked="true" href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a>&apos; width=&apos;100&apos; height=&apos;8&apos; viewBox=&apos;0 0 100 8&apos;%3E%3Cpath d=&apos;M0 4Q25 0 50 4Q75 8 *** 4&apos; fill=&apos;none&apos; stroke=&apos;%2310B981&apos; stroke-width=&apos;2&apos;/%3E%3C/svg%3E&quot;);</p>
+<p>&nbsp; background-repeat: repeat-x;</p>
+<p>&nbsp; /* ** ***** (100px) debe coincidir con ** width del SVG */</p>
+<p>&nbsp; background-size: ***** 8px;</p>
+<p>&nbsp; background-position: 0 0;</p>
+<p>&nbsp; opacity: 0;</p>
+<p>&nbsp; transition: opacity 0.4s ease-in-out;</p>
+<p>}</p>
+<p><br></p>
+<p>/* Al hover: revelar la onda e iniciar la animaci&oacute;n de deslizamiento */</p>
+<p>.list-item:hover .title-text::after {</p>
+<p>&nbsp; opacity: 1;</p>
+<p>&nbsp; /* ⚙️ ********* DE ** **** &mdash; cambia &apos;1.8s&apos; */</p>
+<p>&nbsp; animation: wave-slide 1.8s linear infinite;</p>
+<p>}</p>
+<p><br></p>
+<p>/* La **** se desplaza exactamente un ciclo (100px) **** repetirse *** saltos */</p>
+<p>@keyframes wave-slide {</p>
+<p>&nbsp; from {</p>
+<p>&nbsp; &nbsp; background-position: 0 0;</p>
+<p>&nbsp; }</p>
+<p>&nbsp; to {</p>
+<p>&nbsp; &nbsp; background-position: 100px 0;</p>
+<p>&nbsp; }</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;11. ****** OBLIGATORIO</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>.infographic-footer {</p>
+<p>&nbsp; position: relative;</p>
+<p>&nbsp; z-index: 1;</p>
+<p>&nbsp; max-width: 880px;</p>
+<p>&nbsp; margin: 0 auto;</p>
+<p>&nbsp; padding: 2rem 1.25rem 2.5rem;</p>
+<p>&nbsp; border-top: 1px solid rgba(255, 255, 255, 0.06);</p>
+<p>&nbsp; text-align: center;</p>
+<p>}</p>
+<p><br></p>
+<p>.footer-source {</p>
+<p>&nbsp; font-size: 0.72rem;</p>
+<p>&nbsp; font-weight: 400;</p>
+<p>&nbsp; color: rgba(214, 220, 232, 0.35);</p>
+<p>&nbsp; line-height: 1.7;</p>
+<p>&nbsp; margin-bottom: 0.5rem;</p>
+<p>&nbsp; max-width: 600px;</p>
+<p>&nbsp; margin-left: auto;</p>
+<p>&nbsp; margin-right: auto;</p>
+<p>}</p>
+<p><br></p>
+<p>.footer-author {</p>
+<p>&nbsp; font-size: 0.82rem;</p>
+<p>&nbsp; font-weight: 500;</p>
+<p>&nbsp; color: #F59E0B;</p>
+<p>&nbsp; letter-spacing: 0.02em;</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;12. ********** &mdash; TABLET (min-width: 640px)</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>@media (min-width: 640px) {</p>
+<p><br></p>
+<p>&nbsp; .infographic {</p>
+<p>&nbsp; &nbsp; padding: 3.5*** 2rem 4rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .infographic-header {</p>
+<p>&nbsp; &nbsp; margin-bottom: 3rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .subtitle {</p>
+<p>&nbsp; &nbsp; font-size: 1.05rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-items {</p>
+<p>&nbsp; &nbsp; gap: 1.25rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-item {</p>
+<p>&nbsp; &nbsp; padding: 1.5rem 1.5rem;</p>
+<p>&nbsp; &nbsp; gap: 1.25rem;</p>
+<p>&nbsp; &nbsp; border-radius: 16px;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-item:hover {</p>
+<p>&nbsp; &nbsp; transform: translateX(7px);</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .item-icon {</p>
+<p>&nbsp; &nbsp; width: 64px;</p>
+<p>&nbsp; &nbsp; height: 64px;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .icon-emoji {</p>
+<p>&nbsp; &nbsp; font-size: 1.65rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .item-number {</p>
+<p>&nbsp; &nbsp; font-size: 0.75rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .title-text {</p>
+<p>&nbsp; &nbsp; font-size: 1.15rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .item-content p {</p>
+<p>&nbsp; &nbsp; font-size: 0.92rem;</p>
+<p>&nbsp; }</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;13. ********** &mdash; ******* (min-width: 920px)</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>@media (min-width: 920px) {</p>
+<p><br></p>
+<p>&nbsp; .infographic {</p>
+<p>&nbsp; &nbsp; padding: 4.5rem 2.5rem 5rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-items {</p>
+<p>&nbsp; &nbsp; gap: 1.4rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-item {</p>
+<p>&nbsp; &nbsp; padding: 1.6rem 1.75rem;</p>
+<p>&nbsp; &nbsp; gap: 1.5rem;</p>
+<p>&nbsp; &nbsp; border-radius: 18px;</p>
+<p>&nbsp; &nbsp; border-left-width: 4px;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .list-item:hover {</p>
+<p>&nbsp; &nbsp; transform: translateX(8px);</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .item-icon {</p>
+<p>&nbsp; &nbsp; width: 72px;</p>
+<p>&nbsp; &nbsp; height: 72px;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .icon-emoji {</p>
+<p>&nbsp; &nbsp; font-size: 1.8rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .title-text {</p>
+<p>&nbsp; &nbsp; font-size: 1.25rem;</p>
+<p>&nbsp; &nbsp; margin-bottom: 0.4rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .item-content p {</p>
+<p>&nbsp; &nbsp; font-size: 0.95rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .title-text::after {</p>
+<p>&nbsp; &nbsp; bottom: -6px;</p>
+<p>&nbsp; &nbsp; height: 10px;</p>
+<p>&nbsp; &nbsp; background-size: 100px 10px;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .infographic-footer {</p>
+<p>&nbsp; &nbsp; padding: 2.5rem 2rem 3rem;</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; .footer-source {</p>
+<p>&nbsp; &nbsp; font-size: 0.78rem;</p>
+<p>&nbsp; }</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p>/* -----------------------------------------------------------</p>
+<p>&nbsp; &nbsp;14. ************* &mdash; REDUCIR MOVIMIENTO</p>
+<p>&nbsp; &nbsp;******* la preferencia del ******* por menos animaciones</p>
+<p>&nbsp; &nbsp;----------------------------------------------------------- */</p>
+<p>@media (prefers-reduced-motion: reduce) {</p>
+<p><br></p>
+<p>&nbsp; *,</p>
+<p>&nbsp; *::before,</p>
+<p>&nbsp; *::after {</p>
+<p>&nbsp; &nbsp; animation-duration: 0.**** !important;</p>
+<p>&nbsp; &nbsp; animation-iteration-count: 1 !important;</p>
+<p>&nbsp; &nbsp; transition-duration: 0.01ms !important;</p>
+<p>&nbsp; }</p>
+<p>}</p>
+<div style="color: red">Prueba de Word a HTML - por favor <a href="https://wordtohtml.net/site/payment">Go PRO</a> para obtener el HTML completo.</div>
